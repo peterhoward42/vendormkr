@@ -13,15 +13,6 @@ This repo helps you make the vendor directory externally. So you can then
 copy it in.
 
 
-A vehicle for vendoring a set of Go package dependencies that can be exported 
-and used by another project..
-
-The internet proxy servers in Go development environments in some locked 
-down enterprise environments make the standard Go development iteration model
-awkward because ad-hoc ```go get``` requests when you start using new
-external packages can be blocked by the proxy.
-
-
 ## How To Use It
 
 Edit ```foo.go``` to import and refer to something in each of the packages 
