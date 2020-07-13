@@ -18,6 +18,7 @@ import (
 	"github.com/joho/godotenv"
 	"github.com/kelseyhightower/envconfig"
 	"github.com/antonmedv/expr"
+	"github.com/stretchr/testify/assert"
 )
 
 func main() {
@@ -28,6 +29,7 @@ func main() {
 		godotenv.Load,
 		envconfig.Process,
 		expr.Compile,
+		assert.Equal,
 	}
 
 	// Prevent "deps declared and not used" compilation error.
