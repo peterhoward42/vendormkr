@@ -17,6 +17,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 	"github.com/kelseyhightower/envconfig"
+	"github.com/antonmedv/expr"
 )
 
 func main() {
@@ -26,6 +27,7 @@ func main() {
 		gin.Default,
 		godotenv.Load,
 		envconfig.Process,
+		expr.Compile,
 	}
 
 	// Prevent "deps declared and not used" compilation error.
