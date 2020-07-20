@@ -12,23 +12,11 @@ package main
 
 
 import (
-	"github.com/Shopify/sarama"
-	"github.com/asaskevich/govalidator"
-	"github.com/gin-gonic/gin"
-	"github.com/joho/godotenv"
-	"github.com/kelseyhightower/envconfig"
-	"github.com/antonmedv/expr"
 	"github.com/stretchr/testify/assert"
 )
 
 func main() {
 	deps := []interface{}{
-		sarama.NewConfig,
-		govalidator.SetFieldsRequiredByDefault,
-		gin.Default,
-		godotenv.Load,
-		envconfig.Process,
-		expr.Compile,
 		assert.Equal,
 	}
 
