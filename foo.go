@@ -13,11 +13,15 @@ package main
 
 import (
 	"github.com/stretchr/testify/assert"
+	"github.com/antonmedv/expr"
+	yaml "gopkg.in/yaml.v2"
 )
 
 func main() {
 	deps := []interface{}{
 		assert.Equal,
+		expr.Env,
+		yaml.Marshal,
 	}
 
 	// Prevent "deps declared and not used" compilation error.
