@@ -15,6 +15,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/antonmedv/expr"
 	yaml "gopkg.in/yaml.v2"
+
+	"google.golang.org/grpc"
 )
 
 func main() {
@@ -22,6 +24,7 @@ func main() {
 		assert.Equal,
 		expr.Env,
 		yaml.Marshal,
+		grpc.SupportPackageIsVersion4,
 	}
 
 	// Prevent "deps declared and not used" compilation error.
