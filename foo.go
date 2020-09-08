@@ -17,6 +17,7 @@ import (
 	yaml "gopkg.in/yaml.v2"
 
 	"google.golang.org/grpc"
+	"github.com/gogo/protobuf/proto"
 )
 
 func main() {
@@ -25,6 +26,7 @@ func main() {
 		expr.Env,
 		yaml.Marshal,
 		grpc.SupportPackageIsVersion4,
+		proto.GetBoolExtension,
 	}
 
 	// Prevent "deps declared and not used" compilation error.
