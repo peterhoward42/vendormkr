@@ -17,6 +17,7 @@ import (
 	yaml "gopkg.in/yaml.v2"
 
 	"google.golang.org/grpc"
+	"google.golang.org/genproto/googleapis/api/annotations"
 	"github.com/gogo/protobuf/proto"
 	"github.com/golang/protobuf/ptypes/empty"
 	xstruct "github.com/golang/protobuf/ptypes/struct"
@@ -31,6 +32,7 @@ func main() {
 		proto.GetBoolExtension,
 		empty.File_github_com_golang_protobuf_ptypes_empty_empty_proto,
 		xstruct.NullValue_NULL_VALUE,
+		annotations.E_DefaultHost,
 	}
 
 	// Prevent "deps declared and not used" compilation error.
