@@ -18,6 +18,7 @@ import (
 
 	"google.golang.org/grpc"
 	"github.com/gogo/protobuf/proto"
+	"github.com/golang/protobuf/ptypes/empty"
 )
 
 func main() {
@@ -27,6 +28,7 @@ func main() {
 		yaml.Marshal,
 		grpc.SupportPackageIsVersion4,
 		proto.GetBoolExtension,
+		empty.File_github_com_golang_protobuf_ptypes_empty_empty_proto,
 	}
 
 	// Prevent "deps declared and not used" compilation error.
